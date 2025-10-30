@@ -15,17 +15,20 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 -- 2. Set up method
----@type vim.Option 
+---@type vim.Option
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 -- 3. Configure and install plugins here
 -- Status of plugins ':Lazy'; Update plugins ':Lazy update'
-require('lazy').setup({
-	require 'plugins.neotree',	
-	require 'plugins.colortheme'
-})
-
-
-
-
+require('lazy').setup {
+  require 'plugins.neotree',
+  require 'plugins.colortheme',
+  require 'plugins.treesitter',
+  require 'plugins.telescope',
+  require 'plugins.autocompletion',
+  require 'plugins.lsp',
+  require 'plugins.autoformatting',
+  require 'plugins.alpha',
+  require 'plugins.misc',
+}
