@@ -26,9 +26,11 @@ require('lazy').setup {
   require 'plugins.colortheme',
   require 'plugins.treesitter',
   require 'plugins.telescope',
-  require 'plugins.autocompletion',
+  --require 'plugins.autocompletion',
   require 'plugins.lsp',
   require 'plugins.autoformatting',
   require 'plugins.alpha',
   require 'plugins.misc',
+  require 'plugins.whichkey',
+  require 'plugins.harpoon',
 }
