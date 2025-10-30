@@ -38,6 +38,9 @@ vim.keymap.set('v', '<C-k>', ":m '>+1<CR>gv=gv", opts)
 -- Toggle line wrapping
 vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
 
+-- Other stuff
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux new-window tmux-sessionizer<CR>')
+
 -- Toggle diagnostics
 local diagnostics_active = true
 
@@ -65,4 +68,3 @@ end, { desc = 'Go to next diagnostic message' })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
