@@ -17,6 +17,10 @@ return {
     'tpope/vim-rhubarb',
   },
   {
+    -- GitHub integration for vim-fugitive
+    'tpope/vim-commentary',
+  },
+  {
     -- Autoclose parentheses, brackets, quotes, etc.
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
