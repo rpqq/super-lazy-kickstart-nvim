@@ -17,8 +17,11 @@ return {
     'tpope/vim-rhubarb',
   },
   {
-    -- GitHub integration for vim-fugitive
-    'tpope/vim-commentary',
+    -- Commentary
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
   },
   {
     -- Autoclose parentheses, brackets, quotes, etc.
