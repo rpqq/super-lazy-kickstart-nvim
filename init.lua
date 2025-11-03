@@ -33,5 +33,6 @@ require('lazy').setup {
   require 'plugins.whichkey',
   require 'plugins.harpoon',
   require 'plugins.debug',
-  require 'plugins.misc' -- small packages
+  require 'plugins.cloak',
+  require 'plugins.misc', -- small packages
 }
