@@ -32,11 +32,16 @@ vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 
 -- Move text up and down
-vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", opts)
-vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", opts)
+vim.keymap.set('v', '<K>', ":m '<-2<CR>gv=gv", opts)
+vim.keymap.set('v', '<J>', ":m '>+1<CR>gv=gv", opts)
 
 -- Toggle line wrapping
 vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
+
+-- Clipboard yanks
+vim.keymap.set('v', '<leader>y', '"+y', opts)
+vim.keymap.set('n', '<leader>y', '"+y,', opts)
+vim.keymap.set('n', '<leader>Y', 'gg"yG', opts)
 
 -- Other stuff
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux new-window tmux-sessionizer<CR>')
