@@ -32,8 +32,8 @@ vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 
 -- Move text up and down
-vim.keymap.set('v', '<K>', ":m '<-2<CR>gv=gv", opts)
-vim.keymap.set('v', '<J>', ":m '>+1<CR>gv=gv", opts)
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 
 -- Toggle line wrapping
 vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
