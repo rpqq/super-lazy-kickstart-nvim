@@ -25,7 +25,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 -- Escape terminal mode easier
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- Navigate between splits
+-- Navigate between vim split screens
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
@@ -46,9 +46,13 @@ vim.keymap.set('n', '<leader>Y', 'gg"yG', opts)
 -- Other stuff
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux new-window tmux-sessionizer<CR>')
 
+-- Neotree
+vim.keymap.set('n', '\\', ':Neotree toggle<CR>', { noremap = true, silent = true })
+
 -- Toggle diagnostics
 local diagnostics_active = true
 
+-- Diagnostics
 vim.keymap.set('n', '<leader>do', function()
   diagnostics_active = not diagnostics_active
 
@@ -58,9 +62,6 @@ vim.keymap.set('n', '<leader>do', function()
     vim.diagnostic.enable(false)
   end
 end)
-
--- Neotree
-vim.keymap.set('n', '\\', ':Neotree toggle<CR>', { noremap = true, silent = true })
 
 -- Diagnostics
 vim.keymap.set('n', '[d', function()

@@ -34,5 +34,6 @@ require('lazy').setup {
   require 'plugins.harpoon',
   require 'plugins.debug',
   require 'plugins.cloak',
+  require 'plugins.toggleterm',
   require 'plugins.misc', -- small packages
 }
